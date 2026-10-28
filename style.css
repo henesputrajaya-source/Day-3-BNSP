@@ -1,0 +1,45 @@
+h1 {
+        color: cadetblue;
+        font-size: 28px;
+    }
+
+    button {
+        background-color: #2563eb;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Times New Roman';
+    }
+
+    button:hover {
+        background-color: #1d4de8;
+    }
+
+    h2 {
+        color: chocolate;
+        font-size: 20px;
+    }
+
+    .judul {
+        color: #2563eb;
+        font-weight: bold;
+    }
+
+    #btn-simpan {
+        background-color: green;
+        color: white;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .navbar nav{
+        display: flex;
+        gap: 16px;
+    }

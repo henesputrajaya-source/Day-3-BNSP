@@ -1,0 +1,208 @@
+table{
+    background-color: #F8FAFC;
+}
+
+.poin {
+    background-color: #1E293B;
+}
+
+.header{
+    background-color: #12372A;
+}
+
+.header td{
+    background-color: #12372A;
+    color: gold;
+}
+.sel img{
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+}
+
+p{
+    color: gold;
+}
+
+/* =========================================================
+   cv.css - CV Henes Putra Jaya
+   Bagian 1: CSS asli (tidak diubah)
+   Bagian 2: tambahan dasar agar fleksibel
+   Bagian 3: responsive tablet & HP
+   ========================================================= */
+
+/* ---------- 1. CSS ASLI ---------- */
+table{
+    background-color: #F8FAFC;
+}
+
+.poin {
+    background-color: #1E293B;
+}
+
+.header{
+    background-color: #12372A;
+}
+
+.header td{
+    background-color: #12372A;
+    color: gold;
+}
+.sel img{
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+}
+
+p{
+    color: gold;
+}
+
+
+/* ---------- 2. TAMBAHAN DASAR ---------- */
+* {
+    box-sizing: border-box;
+}
+
+/* tabel utama: fleksibel, maksimal 800px (menggantikan width="800") */
+body > table {
+    width: 100%;
+    max-width: 800px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+td,
+th {
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- 3. RESPONSIVE ---------- */
+
+/* TABLET (<= 900px) */
+@media (max-width: 900px) {
+    body {
+        margin: 0;
+        padding: 12px;
+    }
+
+    body > table > tbody > tr > td,
+    body > table > tbody > tr > th {
+        padding: 12px;
+    }
+
+    /* kolom kiri (foto / judul bagian) lebih ramping */
+    body > table > tbody > tr > .poin {
+        width: 25%;
+    }
+
+    .sel img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    td table {
+        font-size: 0.95rem;
+    }
+}
+
+/* HP (<= 600px): tabel utama menjadi satu kolom */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        font-size: 15px;
+    }
+
+    body > table,
+    body > table > tbody,
+    body > table > tbody > tr,
+    body > table > tbody > tr > td,
+    body > table > tbody > tr > th {
+        display: block;
+        width: 100% !important;
+    }
+
+    /* foto di atas, identitas di bawah */
+    body > table > tbody > tr > .poin {
+        text-align: center;
+        padding: 10px 12px;
+    }
+
+    body > table > tbody > tr:first-child > .poin {
+        padding: 8px 12px 0;
+    }
+
+    .sel img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .header {
+        text-align: center;
+        padding: 8px 16px 20px;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+    }
+
+    /* tabel kontak di header */
+    .header table {
+        margin: 0 auto;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    /* judul bagian (PROFILE, PENDIDIKAN, dst.) jadi strip penuh */
+    body > table > tbody > tr > th.poin {
+        letter-spacing: 1px;
+    }
+
+    body > table > tbody > tr > td {
+        padding: 14px 16px;
+    }
+
+    /* tabel data (pendidikan, pengalaman, proyek) tetap muat */
+    td table[border] {
+        width: 100% !important;
+        font-size: 0.85rem;
+        border-collapse: collapse;
+    }
+
+    td table[border] th,
+    td table[border] td {
+        padding: 6px 5px;
+        vertical-align: top;
+    }
+
+    /* keahlian: Teknis & Non-Teknis ditumpuk */
+    tr:has(> td[width="50%"]) {
+        display: block;
+    }
+
+    td[width="50%"] {
+        display: block;
+        width: 100% !important;
+        padding: 6px 0;
+    }
+}
+
+/* HP kecil (<= 380px) */
+@media (max-width: 380px) {
+    td table[border] {
+        font-size: 0.8rem;
+    }
+
+    .header h1 {
+        font-size: 1.4rem;
+    }
+}
